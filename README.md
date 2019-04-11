@@ -1,4 +1,4 @@
-# docker-mod-auth-oidc
+# mod-auth-oidc
 
 Docker packaging of mod-auth-openidc to test Gluu Server.
 
@@ -32,7 +32,6 @@ docker run \
     -v $PWD/oidc_client_id:/etc/certs/oidc_client_id \
     -v $PWD/oidc_client_secret:/etc/certs/oidc_client_secret \
     -v $PWD/oidc_passphrase:/etc/certs/oidc_passphrase \
-    -v $PWD/tmp:/app/tmp \
     -e OIDC_PROVIDER=https://single.gluu.local \
     -e SERVER_NAME=rp.gluu.local \
     iromli/mod-auth-openidc
