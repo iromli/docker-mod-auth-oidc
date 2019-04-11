@@ -19,7 +19,7 @@ def main():
         "oidc_provider": os.environ.get("OIDC_PROVIDER", "https://localhost"),
         "oidc_passphrase": get_file_content("/etc/certs/oidc_passphrase") or "secret",
         "oidc_cache_type": os.environ.get("OIDC_CACHE_TYPE", "shm"),
-        "oidc_cache_shm_maxsize": int(os.environ.get("OIDCCacheShmEntrySizeMax", 32678)),
+        "oidc_cache_shm_maxsize": int(os.environ.get("OIDC_CACHE_SHM_MAXSIZE", 32678)),
         "oidc_cache_redis_url": os.environ.get("OIDC_CACHE_REDIS_URL", "redis:6379"),
     }
     with open("/app/templates/default-ssl.conf") as fr:

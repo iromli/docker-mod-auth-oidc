@@ -32,6 +32,12 @@ RUN a2enmod \
     cgid \
     auth_openidc
 
+ENV SERVER_NAME localhost
+ENV OIDC_PROVIDER https://localhost
+ENV OIDC_CACHE_TYPE shm
+ENV OIDC_CACHE_SHM_MAXSIZE 32678
+ENV OIDC_CACHE_REDIS_URL localhost:6379
+
 RUN mkdir -p /etc/apache2/ssl /app/templates /app/scripts
 
 COPY static/printHeaders.cgi /usr/lib/cgi-bin/
